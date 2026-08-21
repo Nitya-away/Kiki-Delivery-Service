@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Augiepixel';
+    src: url(assets/font/augiepixel.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F5E1B8;
+}
+
+header {
+    position: relative;
+}
+
+header.hero {
+
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url(assets/imgs/sky.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+header.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.15);
+}
+
+nav {
+    position: relative;
+    z-index: 10;
+    height: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav button {
+    cursor: pointer;
+    font-size: large;
+    font-family: cursive;
+    border: none;
+    background-color: cornsilk;
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    position: relative;
+    color: #4A2C17;
+    border-radius: 0.5rem;
+    gap: 20px;
+    box-shadow: 3px 5px 0 #927d6e;
+}
+
+nav button:hover {
+    color: #F5E1B8;
+    background-color: #4A2C17;
+}
+
+nav button:active {
+    color: #f1e3cf;
+    background-color: #d7aa7f;
+}
+
+#music-toggle {
+    background-color: #f8f1e5;
+    border: none;
+    border-radius: 70%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:20px ;
+}
+
+.music-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 70%;
+}
+
+.music-icon-hidden {
+    display: none;
+}
+
+#music-toggle:hover {
+    background-color: #4A2C17;
+}
+
+#music-toggle:active {
+    background-color: #d7aa7f;
+}
+
+.middle {
+    display: flex;
+    gap: 20px;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 1;
+    color: cornsilk;
+}
+
+h1 {
+    font-family: 'AugiPixel', sans-serif;
+    font-weight: 1200;
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 1rem;
+}
+
+h4 {
+    font-family: 'Augiepixel', sans-serif;
+    text-align: center;
+    font-weight: 900;
+    color: #4A2C17;
+    font-size: 1.5rem;
+}
+
+.kiki-fly {
+    position: relative;
+    width: 200px;
+    pointer-events: none;
+    z-index: 2;
+}
