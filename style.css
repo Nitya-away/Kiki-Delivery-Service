@@ -144,6 +144,34 @@ h4 {
     z-index: 2;
 }
 
+.sparkle {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    animation: sparkleFade 0.8s ease-out forwards;
+}
+@keyframes sparkleFade {
+    0% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+    100%  {
+        opacity: 0;
+        transform: scale(0.3) translateY(12px) rotate(20deg);
+    }
+}
+
+.sparkle-blossom {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.sparkle-star {
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #fff9ee 0%, #927d6e 60%, transparent 80%);
+}
+
 main {
     min-height: 90vh;
     display: flex;

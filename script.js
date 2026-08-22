@@ -39,3 +39,64 @@ const smoothing  = 0.08;
 const sparkleInterval = 80;
 let lastSparkleTime = 0;
 
+hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    mouseX = e.clientX - rect.left;
+    mouseY = e.clientY - rect.top;
+});
+
+function getMinY() {
+    const heroRect = hero.getBoundingClientRect();
+    const navRect = nav.getBoundingClientRect();
+    return (navRect.bottom - heroRect.top) + 20;
+}
+
+let sparkleToggle = false;
+
+function spawnSparkle(x,y) {
+    const sparkle = document.createElement('div');
+    sparkle.classList.add('sparkle');
+
+    if (sparkleToggle) {
+        sparkle.classList.add('sparkle-blossom');
+        sparkle.textContent = '🌼'
+    } else {
+        sparkle.classList.add('sparkle-star');
+    }
+    sparkleToggle = !sparkleToggle;
+
+    sparkle.style.left = `${x + (Math.random() * 20 - 10)}px`;
+    sparkle.style.top = `${y + (Math.random() * 20 -10)}px`;
+    hero.appendChild(sparkle);
+
+    setTimeout(() => sparkle.remove(), 800);
+}
+
+function animate(time) {
+    const targetX = mouseX - 50;
+    let targetY = mouseY - 50;
+
+    const minY = getMinY();
+    if (targetY < minY) {
+        targetY = minY;
+    }
+
+    kikiX += (targetX - kikiX) * smoothing;
+    kikiY += (targetY - kikiY) * smoothing;
+
+    const dx = targetX - kikiX;
+    const tilt = Math.max(-15, Math.min(15, dx * 0.3));
+
+    kiki.style.left = `${kikiX}px`;
+    kiki.style.top = `${kikiY}px`;
+    kiki.style.transform = `rotate(${tilt}deg)`;
+
+    if (time - lastSparkleTime > sparkleInterval) {
+        spawnSparkle(kikiX + 50 , kikiY + 80);
+        lastSparkleTime = time;
+    }
+
+    requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);
