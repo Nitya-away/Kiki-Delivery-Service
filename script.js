@@ -25,7 +25,6 @@ musictoggle.addEventListener('click', () => {
 });
 
 // our Flying gurll
-// Will add this laterr 
 const hero = document.querySelector('header.hero');
 const kiki = document.querySelector('.kiki-fly');
 const nav = document.querySelector('nav');
@@ -100,3 +99,60 @@ function animate(time) {
 }
 
 requestAnimationFrame(animate);
+
+const bakeryForm = document.getElementById('bakery-form');
+const personalDeliveryForm = document.getElementById('personal-delivery-form');
+const deliveryStatus = document.getElementById('delivery-status');
+const deliveryMessage = document.getElementById('delivery-message');
+
+function showDeliveryStatus(message){
+    deliveryMessage.textContent = message;
+    deliveryStatus.classList.remove('hidden');
+
+    const broom = deliveryStatus.querySelector('.broom-icon');
+    broom.style.animation = 'none';
+    void broom.offsetWidth;
+    broom.style.animation = 'fly 1.2s ease-in-out';
+
+    requestAnimationFrame(() => {
+        deliveryStatus.classList.add('visible');
+    });
+    deliveryStatus.scrollIntoView({behavior: 'smooth', block: 'center'});
+}
+
+bakeryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const bread = Number(document.getElementById('bread').value) || 0;
+    const baguette = Number(document.getElementById('baguette').value) || 0;
+    const sourdough = Number(document.getElementById('sourdough').value) || 0;
+    const province = document.getElementById('bakery-province').value;
+
+    if (bread + baguette + sourdough === 0 ) {
+        alert('Please Select At Least One Item To Order.');
+        return;
+    }
+    if (!province) {
+        alert('Please Choose A Delivery location.');
+        return;
+    }
+
+    showDeliveryStatus(`Your Freshly Baked Food Are On The Way to ${province}!`);
+    bakeryForm.reset();
+});
+
+personalDeliveryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const weight = document.getElementById('weight').value;
+    const pickup = document.getElementById('pickup-provience').value;
+    const destination = document.getElementById('destination').value;
+
+    if (!weight || !pickup || !destination) {
+        alert('Please Fill in All The Delivery Details.');
+        return;
+    }
+
+    showDeliveryStatus(`Kiki is Flying towards from ${pickup} to ${destination} Asapp!`);
+    personalDeliveryForm.reset();
+});
