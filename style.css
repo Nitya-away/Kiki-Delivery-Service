@@ -565,3 +565,65 @@ color: #4A2C17;
     display: none;
 }
 
+footer {
+    position: relative;
+    background-color: #4A2C17;
+    color: #f8f1e5;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-top: 4px dashed #927d6e;
+}
+
+footer h2 {
+    font-family: 'AugiePixel';
+    font-size: 2rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.icons img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+
+}
+
+.icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #4A2C17;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.icons a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255,255,255,0.5);
+}
+
+footer .content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+footer .content p:first-child {
+    padding-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+footer .content p:nth-child(2) ,
+footer .content p:last-child {
+    padding-top: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
