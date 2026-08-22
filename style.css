@@ -421,3 +421,147 @@ main {
     border-radius: 999px;
 }
 
+
+.delivery-title {
+    font-family: 'AugiePixel', sans-serif;
+    color: #4A2C17;
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 50px;
+}
+
+.delivery-intro {
+    max-width: 600px;
+    color: #4A2C17;
+    margin: 1rem auto 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'AugiePixel';
+    line-height: 1.5;
+}
+
+.delivery-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 4rem;
+}
+
+.delivery-card {
+    position: relative;
+    background: #f8f1e5;
+    border: 1px solid #927d6e;
+    border-radius: 1.5rem;
+    padding: 2rem 2.5rem;
+    width: 350px;
+    box-shadow: 0 10px 22px rgba(74, 44, 23, 0.3),
+    0 1px 0 rgba(255,255,255,0.5);
+    transform: translateY(-4px);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.delivery-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    background: #f1e3cf;
+    border: 1px solid #927d6e;
+    transform: rotate(-3deg);
+    z-index: -1;
+}
+
+.delivery-card::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 100px;
+    height: 26px;
+    background: rgba(98,41,9,0.5);
+    border: 1px solid rgba(98,41,9,0.5);
+}
+
+.delivery-card fieldset {
+    border: none;
+    padding: 0;
+}
+
+.delivery-card legend {
+    font-size: 1.8rem;
+    color: #4A2C17;
+    font-family: 'AugiePixel', sans-serif;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.delivery-card label {
+    display: block;
+    font-family: 'AugiePixel', sans-serif;
+    font-size: 1rem;
+    color: #4A2C17;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.delivery-card input ,
+.delivery-card select
+{
+width: 100%;
+padding: 0.5rem 0.7rem;
+border: 1px solid #927d6e;
+border-radius: 0.5rem;
+background-color: #fff;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 1rem;
+color: #4A2C17;
+}
+
+.delivery-card button {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 0.5rem 1.8rem;
+    background-color: #4A2C17;
+    color: cornsilk;
+    border: none;
+    border-radius: 999px;
+    font-family: 'AugiePixel', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease,transform 0.2s ease;
+}
+
+.delivery-card button:hover {
+    color: #4A2C17;
+    background-color: cornsilk;
+    transform: translateY(-2px);
+}
+
+.delivery-card button:active {
+    background-color: #d7aa7f;
+    color: #4A2C17;
+}
+
+.delivery-status {
+    text-align: center;
+    margin-top: 2.5rem;
+    color: #4A2C17;
+    opacity: 3;
+    transition: opacity 0.4s ease;
+}
+
+.delivery-status.visible {
+    opacity: 1;
+}
+
+.broom-icon {
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+

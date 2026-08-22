@@ -97,8 +97,87 @@
                 </article>
             </div>
         </section>
-        
+
+        <section id="delivery-section">
+            <h1 class="delivery-title">Orders & Delivery</h1>
+            <p class="delivery-intro">We offer Two services: Delivering Freshly Baked Goods from a very Amazing bakery, and My (Kiki's) Personal Delivery Service, where she picks up item/goods fron Your doorstep and Delivers To Your Desired Address in few mins or hrs across the city. </p>
+
+                <div class="delivery-form">
+                    <form id="bakery-form" class="delivery-card">
+                        <fieldset>
+                            <legend>Baked Goods</legend>
+
+                            <label for="bakery-Name">Name</label>
+                            <input id="bakery-name" type="text" required>
+
+                            <label for="bread">Bread</label>
+                            <input id="bread" type="number" min="0" max="10" value="0">
+
+                            <label for="baguette">Baguette</label>
+                            <input id="baguette" type="number" min="0" max="10" value="0">
+
+                            <label for="sourdough">SourDough</label>
+                            <input id="sourdough" type="number" min="0" max="10" value="0">
+
+                            <label for="bakery-province">Deliver To</label>
+                            <select id="bakery-province">
+                                <option value="">Select A Location</option>
+                                <option value="koriko City Center">Koriko City Center</option>
+                                <option value="Clock Tower">Clock Tower</option>
+                                <option value="The Harbor">The Harbor</option>
+                                <option value="Market Square">Market Square</option>
+                                <option value="Tombo's Workshop">Tombo's Workshop</option>
+                                <option value="Park">Park</option>
+                            </select>
+
+                            <button type="submit">Place Order</button>
+                        </fieldset>
+                    </form>
+
+                    <form id="personal-delivery-form" class="delivery-card">
+                        <fieldset>
+                            <legend>Personal Delivery</legend>
+                            <label for="sender-name">Name</label>
+                            <input id="sender-name" type="text" required>
+
+                            <label for="weight">Weight Of Package (kg)</label>
+                            <input id="weight" type="number" min="0" max="10">
+
+                            <label for="pickup-provience">Pickup Location</label>
+                            <select id="pickup-provience">
+                                <option value="">Select A Location</option>
+                                <option value="koriko City Center">Koriko City Center</option>
+                                <option value="Clock Tower">Clock Tower</option>
+                                <option value="The Harbor">The Harbor</option>
+                                <option value="Market Square">Market Square</option>
+                                <option value="Tombo's Workshop">Tombo's Workshop</option>
+                                <option value="Park">Park</option>
+                            </select>
+
+                            <label for="destination">Destination</label>
+                            <select id="destination">
+                                <option value="">Select A Location</option>
+                                <option value="koriko City Center">Koriko City Center</option>
+                                <option value="Clock Tower">Clock Tower</option>
+                                <option value="The Harbor">The Harbor</option>
+                                <option value="Market Square">Market Square</option>
+                                <option value="Tombo's Workshop">Tombo's Workshop</option>
+                                <option value="Park">Park</option>
+                            </select>
+
+                            <button type="submit">Send Package</button>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div id="delivery-status" class="delivery-status hidden">
+                    <div class="broom-icon">🧹</div>
+                    <p id="delivery-message"></p>
+                </div>
+        </section>
     </main>
+
+
 </body>
 
 <script src="script.js"></script>
