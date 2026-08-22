@@ -321,3 +321,103 @@ main {
     text-align: center;
     padding: 20px;
 }
+
+#menu-section {
+    padding: 5rem 7rem;
+    background-color: #e8c9a0;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px);
+        border-radius: 1.5rem;
+        background-size: 20px 20px;
+}
+
+.menu-title {
+    font-family: 'AugiePixel', sans-serif;
+    color: #4A2C17;
+    text-align: center;
+    font-size: 4rem;
+    padding-bottom: 0%;
+    padding-top: 20px;
+}
+
+.bakery-name {
+    text-align: center;
+    padding: 20px 20px;
+    color: #4A2C17;
+    font-family: 'AugiePixel', sans-serif ;
+    padding-bottom: 20px;
+    padding-top: 0%;
+    font-size: medium;
+}
+
+.bread-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bread-card {
+    flex: 0 0 250px;
+    min-width: 0;
+    width: 250px;
+    background: #f8f1e5;
+    padding: 2.5rem 2.5rem;
+    border: 1px solid #927d6e;
+    border-radius: 1.5rem;
+    text-align: center;
+    height: 350px;
+    cursor: grab;
+    box-shadow: 0 4px 10px rgba(74, 44, 23, 0.3);
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bread-card:hover {
+    background-color: #d7aa7f;
+    border-color: #4A2C17;
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 8px 18px rgba(74, 44, 23, 0.4);
+}
+
+.bread-card:active {
+    cursor: grabbing;
+}
+
+.bread-art {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.bread-card h3 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    color: #4A2C17;
+    font-family: 'AugiePixel', sans-serif;
+}
+
+.bread-card p {
+    font-family: cursive;
+    color: #4A2C17;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.price {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4A2C17;
+    background-color: #e8c9a0;
+    padding: 0.25rem 1rem;
+    border-radius: 999px;
+}
+
